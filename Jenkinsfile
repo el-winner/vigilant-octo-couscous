@@ -1,6 +1,9 @@
 pipeline {
   
   agent any
+  tools {
+    maven 'Maven-3.8.4'
+  }
   
   stages {
     
@@ -9,8 +12,6 @@ pipeline {
       steps {
         echo 'building the application...'
         echo 'Application built...'
-        sh 'export MAVEN_HOME=/opt/maven'
-        sh 'export PATH=$PATH:$MAVEN_HOME/bin'
         sh 'mvn clean install'
       }
     }
