@@ -8,7 +8,7 @@ pipeline {
       
       steps {
         echo 'building the application...'
-        echo 'Application built...
+        echo 'Application built...'
         sh 'mvn clean install'
       }
     }
