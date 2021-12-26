@@ -18,6 +18,10 @@ pipeline {
     }
     stage("test") {
       
+      when {
+        BRANCH_NAME == 'main'
+      }
+      
       steps {
         echo 'testing the application...'
       }
