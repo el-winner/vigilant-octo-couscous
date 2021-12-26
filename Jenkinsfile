@@ -9,6 +9,9 @@ pipeline {
       steps {
         echo 'building the application...'
         echo 'Application built...'
+        withMaven() {
+          sh 'mvn clean install'
+        }
       }
     }
     stage("test") {
