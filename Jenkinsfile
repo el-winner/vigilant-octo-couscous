@@ -1,9 +1,6 @@
 pipeline {
   
   agent any
-  tools {
-    maven 'Maven-3.8.4'
-  }
   
   stages {
     
@@ -12,7 +9,10 @@ pipeline {
       steps {
         echo 'building the application...'
         echo 'Application built...'
-        sh 'mvn clean install'
+        withMaven {
+          sh 'mvn clean install'
+    }
+  }
       }
     }
     stage("test") {
