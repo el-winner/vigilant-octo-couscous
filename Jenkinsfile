@@ -11,8 +11,7 @@ pipeline {
         echo 'Application built...'
         withMaven {
           sh 'mvn clean install'
-    }
-  }
+        }
       }
     }
     stage("test") {
