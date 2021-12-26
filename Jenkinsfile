@@ -8,10 +8,8 @@ pipeline {
       
       steps {
         echo 'building the application...'
-        echo 'Application built...'
-        withMaven() {
-          sh 'mvn clean install'
-        }
+        echo 'Application built...
+        sh 'mvn clean install'
       }
     }
     stage("test") {
