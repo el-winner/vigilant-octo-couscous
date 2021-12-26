@@ -9,6 +9,8 @@ pipeline {
       steps {
         echo 'building the application...'
         echo 'Application built...'
+        export MAVEN_HOME=/opt/maven
+        export PATH=$PATH:$MAVEN_HOME/bin
         sh 'mvn clean install'
       }
     }
