@@ -4,3 +4,5 @@ def buildApp() {
         echo "Building version ${NEW_VERSION}..."
         sh 'mvn clean install'
 }
+
+return this
