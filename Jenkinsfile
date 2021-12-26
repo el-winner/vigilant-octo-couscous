@@ -9,7 +9,7 @@ pipeline {
       steps {
         echo 'building the application...'
         echo 'Application built...'
-        withMaven {
+        withMaven(maven = 'Maven-3.8.4') {
           sh 'mvn clean install'
         }
       }
